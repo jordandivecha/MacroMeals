@@ -1,0 +1,27 @@
+{
+  "name": "macromeals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanchadsey/MacroMeals.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanchadsey/MacroMeals/issues"
+  },
+  "homepage": "https://github.com/jordanchadsey/MacroMeals#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "iifym.js": "^1.0.0",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.28.1"
+  }
+}
