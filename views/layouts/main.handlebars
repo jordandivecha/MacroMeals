@@ -8,13 +8,9 @@
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="/css/materialize.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,11 +19,20 @@
 
 	</head>
 	<body>
-		<ul id="slide-out" class="sidenav sidenav-fixed">
-		 <li><a href="#!">First Sidebar Link</a></li>
-		 <li><a href="#!">Second Sidebar Link</a></li>
-	 </ul>
-	 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	<!-- Side Nav -->
+		<ul id="slide-out" class="side-nav fixed">
+			<li><div class="user-view">
+      <div class="background">
+        <img src="">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div> </li>
+	      <li><a href="#!">First Sidebar Link</a></li>
+	      <li><a href="#!">Second Sidebar Link</a></li>
+	    </ul>
+	    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a
 
 
 		{{{ body }}}

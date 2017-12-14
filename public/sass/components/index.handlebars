@@ -1,0 +1,135 @@
+<div class = "container">
+  <div class = "jumbotron title">
+    <h1>Concerts to Experience</h1>
+  </div>
+<div class = "row">
+  <div class = "col-sm-3"></div>
+  <div class = "col-sm-6">
+    <img  class= "responsiveimage" src = "assets/img/concert.gif">
+  </div>
+  <div class = "col-sm-3"></div>
+</div>
+<div class = 'row'>
+<div class = 'col-sm-1'></div>
+<div class = 'col-sm-5'>
+  <h3>Concerts to See</h3>
+<div class = "concertsnotseen">
+  {{#each concerts}}
+    {{#unless rockout}}
+
+      <p id = "artistholdernotseen">
+        <bold>{{this.artist}}</bold>
+
+        <button data-artistid="{{this.id}}" class="rockout btn" name="false"><span class="glyphicon glyphicon-music" aria-hidden="true"></span></button>
+
+        <button data-artistid="{{this.id}}" class="delete btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+      </p>
+    {{/unless}}
+  {{/each}}
+</div>
+</div>
+<div class = "col-sm-5">
+  <h3>Concerts I've Seen</h3>
+<div id = "concertsseen">
+  {{#each concerts}}
+    {{#if rockout}}
+      <p id = "artistholderseen">
+        <bold>{{this.artist}}</bold>
+
+        <button data-artistid="{{this.id}}" class="unrockout btn" name="true"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span></button>
+        <button data-artistid="{{this.id}}" class="delete btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+      </p>
+    {{/if}}
+  {{/each}}
+</div>
+</div>
+<div class = "col-sm-1">
+</div>
+</div>
+
+
+<h3>Add an Artist that You'd Like to See in Concert</h3>
+<form id="addconcert" class="button-size">
+	<textarea type="text" name="artist"></textarea>
+	<button type="submit" class = "submit btn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+</form>
+</div>
+
+
+<script type="text/javascript">
+  $(".rockout").on("click", function(event) {
+    var id = $(this).data("artistid");
+    var boo =
+    {rockout: 1};
+
+    // Mark as seen
+    $.ajax("/concerts/" + id, {
+      type: "PUT",
+      data: boo
+    }).then(
+      function() {
+        console.log("rocked out to", id);
+
+        location.reload();
+      }
+    );
+  });
+
+  $("#addconcert").on("submit", function(event) {
+
+    event.preventDefault();
+
+    var newConcert = {
+      artist: $("#addconcert [name=artist]").val().trim()
+    };
+
+
+    $.ajax("/concerts", {
+      type: "POST",
+      data: newConcert
+    }).then(
+      function() {
+        console.log("added new concert");
+
+        location.reload();
+      }
+    );
+}
+);
+
+  $(".unrockout").on("click", function(event){
+    event.preventDefault();
+    var id = $(this).data("artistid");
+    var boo =
+    {rockout: 0};
+    // Mark as unseen
+    $.ajax("/concerts/" + id, {
+      type: "PUT",
+      data: boo
+    }).then(
+      function() {
+        console.log("unrocked out to", id);
+        location.reload();
+      }
+    );
+
+  });
+
+  $(".delete").on("click",
+function(event){
+  event.preventDefault();
+  var id = $(this).data("artistid");
+  // Send the DELETE request.
+  $.ajax("/concerts/" + id, {
+    type: "DELETE"
+  }).then(
+    function() {
+      console.log("deleted concert", id);
+      // Reload the page to get the updated list
+      location.reload();
+    }
+  );
+});
+
+
+</script>
