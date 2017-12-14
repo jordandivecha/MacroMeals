@@ -1,4 +1,5 @@
 // sends the user to the index page
+module.exports = function (app){
 app.get("/", function(req, res) {
   // res.redirect("/login");
   res.render("index");
@@ -27,3 +28,4 @@ app.get("/mealsearch", function(req, res){
 app.get("/mealbox", function(req, res){
   res.render("mealbox");
 });
+};
