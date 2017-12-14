@@ -1,57 +1,58 @@
+
 module.exports = function(sequelize, DataTypes) {
 
 var User = sequelize.define("User", {
   gender: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false
   },
   age: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   isMetric: {
-    type: Sequelize.BOOLEAN
+    type: DataTypes.BOOLEAN
   },
   ft: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   in: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   cm: {
-    type: Sequelize.INTEGER
+    type: DataTypes.INTEGER
   },
   lbs: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   kg: {
-    type: Sequelize.INTEGER
+    type: DataTypes.INTEGER
   },
   mifflinStJeor: {
-    type: Sequelize.BOOLEAN,
+    type: DataTypes.BOOLEAN,
     allowNull: false
   },
   bodyFatPercentage: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   exerciseLevel: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   goal: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   protein: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   fat: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   }
 });
