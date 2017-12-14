@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "express-handlebars": "^3.0.0",
     "iifym.js": "^1.0.0",
     "mysql2": "^1.5.1",
+    "node-sass": "file:node-sass",
     "sequelize": "^4.28.1"
   }
 }
