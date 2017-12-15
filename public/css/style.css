@@ -2184,7 +2184,7 @@ ul.staggered-list li {
 .page-footer {
   padding-top: 20px;
   color: #fff;
-  background-color: #ee6e73; }
+  background-color: black; }
   .page-footer .footer-copyright {
     overflow: hidden;
     min-height: 50px;
@@ -5308,7 +5308,7 @@ input[type=range]:focus::-ms-fill-upper {
   top: 0;
   margin: 0;
   transform: translateX(-100%);
-  height: 80%;
+  height: 100%;
   height: calc(100% + 60px);
   height: -moz-calc(100%);
   padding-bottom: 60px;
@@ -6835,26 +6835,48 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
-footer {
-  background-color: #26a69a; }
+header, main, footer {
+  padding-left: 200px; }
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
+@media only screen and (max-width: 992px) {
   header, main, footer {
-    padding-left: 200px;
-  }
+    padding-left: 0; } }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
 
-  @media only screen and (max-width : 992px) {
-    header, main, footer {
-      padding-left: 0;
-    }
-  }
+main {
+  flex: 1 0 auto; }
+
+h1 {
+  color: #ee6e73; }
+
+.footer-copyright {
+  text-align: center; }
+
+footer {
+  height: 200px; }
+
+.macrosmini {
+  background-color: #ee6e73;
+  text-align: center; }
+
+.macrotitleside {
+  font-weight: bold; }
+
+.usertitle {
+  text-align: center; }
+
+.userpicside {
+  margin: 0 auto; }
+
+.userinfoside {
+  padding-top: 2px;
+  background-color: black;
+  margin: 10px; }
+
+.sidelinks {
+  margin: 2em auto; }
 
 /*# sourceMappingURL=style.css.map */

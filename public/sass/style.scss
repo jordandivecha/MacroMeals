@@ -40,3 +40,57 @@
 @import "components/date_picker/default";
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
+
+header, main, footer {
+  padding-left: 200px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1{
+  color: $primary-color;
+}
+.footer-copyright{
+  text-align: center;
+}
+
+footer{
+  height: 200px;
+}
+.macrosmini{
+  background-color: $primary-color;
+  text-align: center;
+
+}
+.macrotitleside{
+    font-weight: bold;
+}
+.usertitle{
+  text-align: center;
+}
+
+.userpicside{
+  margin: 0 auto;
+}
+
+.userinfoside {
+  padding-top: 2px;
+  background-color: black;
+  margin: 10px;
+}
+.sidelinks{
+  margin: 2em auto;
+}

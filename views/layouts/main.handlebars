@@ -20,19 +20,34 @@
 	</head>
 	<body>
 	<!-- Side Nav -->
-		<ul id="slide-out" class="side-nav fixed">
-			<li><div class="user-view">
-      <div class="background">
-        <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb">
+		<ul id="slide-out" class="side-nav fixed responsive">
+			<li><div class="user-view center">
+      <div class="background" >
+        <img src="https://images.pexels.com/photos/255501/pexels-photo-255501.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" height=300px width=200px>
       </div>
-      <a href="#!user"><img class="circle" src={{this.image}}></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      <a href="#!user"><img class="circle userpicside" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"></a>
+			<div class = "userinfoside">
+      <a href="#!name"><span class="white-text name">Bob Jones</span></a>
+      <a href="#!username"><span class="white-text username">coolbobfit</span></a>
+		</div>
     </div> </li>
-	      <li><a href="#!">First Sidebar Link</a></li>
-	      <li><a href="#!">Second Sidebar Link</a></li>
+		<div class ="sidelinks">
+	      <li><a href="#!">Update Profile</a></li>
+	      <li><a href="#!">Recalculate Macros</a></li>
+				<li><a href="#!">Search Recipes</a></li>
+	      <li><a href="#!">View Saved Recipes</a></li>
+		</div>
+			<li>
+				<div class = "macrosmini">
+					<span class = "black-text macrotitleside">Daily Macros</span><br>
+					<span class="white-text caloriesside">Calories: {{this.calories}}</span><br>
+		     <span class="white-text carbsside">Carbs: {{this.carb}} </span><br>
+					<span class="white-text fatside">Fat: {{this.fat}}</span><br>
+		      <span class="white-text proteinside">Protein: {{this.protein}}</span>
+				</div>
+			</li>
 	    </ul>
-	    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a
+	    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
 
 		{{{ body }}}
@@ -40,25 +55,15 @@
 		<footer class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
+              <div class="col l12 s12">
+                <h5 class="white-text center">Footer Content</h5>
+                <p class="grey-text text-lighten-4 center">You can use rows and columns here to organize your footer content.</p>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
             © 2017 MacroMeals
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
         </footer>
