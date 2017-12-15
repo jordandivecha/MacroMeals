@@ -1,5 +1,98 @@
 <main class="main">
-	<div class="row">
-			<h1 class= "usertitle"> User Profile </h1>
-		</div>
-  </main>
+  <div class="row">
+    <h1 class="usertitle"> User Profile </h1>
+    <div class="row">
+      <div class="col s2"></div>
+      <form class="col s8 userintakeholder z-depth-2 center">
+        <div class="row">
+          <div class="input-field col s4">
+            <input id="firstname" type="text" class="validate">
+            <label for="firstname">First Name</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="lastname" type="text" class="validate">
+            <label for="lastname">Last Name</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="username" type="text" class="validate">
+            <label for="username">Username</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3">
+            <select>
+            <option value="" disabled selected></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+            <label>Sex</label>
+          </div>
+          <div class="input-field col s2">
+
+            <input id="age" type="number" class="validate">
+            <label for="age">Age</label>
+          </div>
+
+          <div class="col s2">
+
+            <div class="input-field inline">
+              <input id="heightfeet" type="number" class="validate">
+              <label for="heightfeet">Feet</label>
+              <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
+            </div>
+          </div>
+          <div class="col s2">
+
+            <div class="input-field inline">
+              <input id="heightfeet" type="number" class="validate">
+              <label for="heightfeet">Inches</label>
+              <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
+            </div>
+          </div>
+          <div class="input-field col s3">
+
+            <input id="weight" type="number" class="validate">
+            <label for="weight">Weight</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3">
+            <select>
+            <option value="" disabled selected></option>
+            <option value="0.8">Cut</option>
+            <option value="1">Maintain</option>
+            <option value="1.1">Bulk</option>
+          </select>
+            <label>Goal</label>
+          </div>
+
+          <div class=" col s6 activityslider">
+            <form action="#">
+              <p class="rangedescrip center">On a scale 1-9, rate your daily activity level.</p>
+              <p class="range-field">
+                <input type="range" id="activity level" min="1" max="9" />
+              </p>
+            </form>
+          </div>
+
+          <div class="input-field col s3">
+            <select>
+      <option value="" disabled selected></option>
+      <option value="1">No</option>
+      <option value="0">Yes</option>
+    </select>
+            <label>Clinically Obese?</label>
+          </div>
+          <div class="col s1"></div>
+        </div>
+        <div class="row">
+          <div class="col s3"></div>
+
+
+
+      </form>
+
+      <div class="col s2"></div>
+      </div>
+    </div>
+</main>
