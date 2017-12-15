@@ -2,58 +2,76 @@
 module.exports = function(sequelize, DataTypes) {
 
 var User = sequelize.define("User", {
+  firstname: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+
+  lastname: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+
+  username: {
+    type: DataTypes.STRING,
+  },
+
   gender: {
     type: DataTypes.STRING,
-    allowNull: false
+
   },
+
   age: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
-  isMetric: {
-    type: DataTypes.BOOLEAN
-  },
+
   ft: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
-  in: {
+
+  inches: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
-  cm: {
-    type: DataTypes.INTEGER
-  },
+
   lbs: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
-  kg: {
-    type: DataTypes.INTEGER
-  },
+
   mifflinStJeor: {
     type: DataTypes.BOOLEAN,
-    allowNull: false
+
   },
-  bodyFatPercentage: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  },
+
   exerciseLevel: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
+
   goal: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
+
   protein: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
   },
+
   fat: {
     type: DataTypes.INTEGER,
-    allowNull: false
+
+  },
+
+  carbs: {
+    type: DataTypes.INTEGER,
+  },
+
+  calories: {
+    type: DataTypes.INTEGER,
   }
 });
 
