@@ -4,7 +4,7 @@ var db = require("../models");
 
 module.exports = function (app){
 
-app.put ("/profile", function (req, res){
+app.put ("/profile", function (req, res) {
 
   calculator(req.body.gender, req.body.age, req.body.ft, req.body.inches, req.body.lbs, req.body.mifflinStJeor, req.body.exerciseLevel,  req.body.goal,
 
@@ -29,6 +29,7 @@ app.put ("/profile", function (req, res){
 
       console.log(JSON.stringify(profile, null, 2));
 
+<<<<<<< Updated upstream
       db.User.update(
         {
           firstname : profile.firstname,
@@ -56,6 +57,15 @@ app.put ("/profile", function (req, res){
       });
 
 
+=======
+      unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByNutrients?maxCalories=250&maxCarbs=100&maxFat=20&maxProtein=100&minCalories=0&minCarbs=0&minFat=5&minProtein=0&number=10&offset=0")
+      .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
+      .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
+      .end(function (result) {
+        console.log(result.body);
+
+      });
+>>>>>>> Stashed changes
   });
 
 
