@@ -91,6 +91,15 @@ var User = sequelize.define('user', {
         }
 });
 
+
+User.associate = function(models) {
+
+  User.hasMany(models.Meal, {
+    onDelete: "cascade"
+  });
+
+};
+
   return User;
 };
 
