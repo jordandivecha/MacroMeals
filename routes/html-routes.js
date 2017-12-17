@@ -1,9 +1,9 @@
 // sends the user to the index page
 module.exports = function (app){
-app.get("/", function(req, res) {
-  res.redirect("/dashboard");
-  // res.render("index");
-});
+// app.get("/", function(req, res) {
+//
+//   res.render("index");
+// });
 
 
 // sends user to login page
