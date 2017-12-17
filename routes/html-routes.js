@@ -35,4 +35,8 @@ app.get("/index", function(req,res){
 
   });
 });
+
+app.get("/mealsearch", function (req,res){
+  res.render("mealsearch");
+});
 };

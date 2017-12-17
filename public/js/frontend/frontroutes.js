@@ -27,3 +27,25 @@ $("#sendprofile").on("click", function(event) {
 
 
   });
+
+$("#submitsearch").on("click", function(event){
+  event.preventDefault();
+  console.log("I've been clicked");
+
+  var usersearch ={
+    calories: $("#calories").val(),
+    protein: $("#protein").val(),
+    carbs: $("#carbs").val(),
+    fat: $("#fat").val()
+  };
+
+console.log(usersearch);
+$.ajax({
+  method: "POST",
+  url: "/api/mealsearch",
+  data: usersearch
+}).done(function(){
+  console.log(result);
+});
+
+});
