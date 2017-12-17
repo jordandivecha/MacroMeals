@@ -16,7 +16,7 @@ var userinfo = {
   'protein': 0.7,             // Protein grams per lb of body weight. Recommend: 0.7, 0.8, or 0.9
   'fat': 0.35                 // Fat grams per lb of body weight. Recommend: 0.3, 0.35, or 0.4
 };
-
+console.log (userinfo);
 var calculator = iifym.calculate(userinfo);
 console.log (calculator);
 

@@ -19,13 +19,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s3">
-            <select>
+          <div class="input-field col s3" >
+            <select id="gender">
             <option value="" disabled selected></option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
-            <label>Sex</label>
+            <label>Gender</label>
           </div>
           <div class="input-field col s2">
 
@@ -36,28 +36,28 @@
           <div class="col s2">
 
             <div class="input-field inline">
-              <input id="heightfeet" type="number" class="validate">
-              <label for="heightfeet">Feet</label>
+              <input id="ft" type="number" class="validate">
+              <label for="ft">Feet</label>
               <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
             </div>
           </div>
           <div class="col s2">
 
             <div class="input-field inline">
-              <input id="heightfeet" type="number" class="validate">
-              <label for="heightfeet">Inches</label>
+              <input id="inches" type="number" class="validate">
+              <label for="inches">Inches</label>
               <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
             </div>
           </div>
           <div class="input-field col s3">
 
-            <input id="weight" type="number" class="validate">
-            <label for="weight">Weight</label>
+            <input id="lbs" type="number" class="validate">
+            <label for="lbs">Weight</label>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s3">
-            <select>
+          <div class="input-field col s3" >
+            <select id= "goal">
             <option value="" disabled selected></option>
             <option value="0.8">Cut</option>
             <option value="1">Maintain</option>
@@ -67,26 +67,30 @@
           </div>
 
           <div class=" col s6 activityslider">
-            <form action="#">
+            <form action="#" id="exerciseLevel">
               <p class="rangedescrip center">On a scale 1-9, rate your daily activity level.</p>
               <p class="range-field">
-                <input type="range" id="activity level" min="1" max="9" />
+                <input type="range"  min="1" max="9" id="exerciseLevel" />
               </p>
             </form>
           </div>
 
-          <div class="input-field col s3">
-            <select>
-      <option value="" disabled selected></option>
-      <option value="1">No</option>
-      <option value="0">Yes</option>
+          <div class="input-field col s3" >
+            <select type= "Boolean" id="mifflinStJeor">
+              <option value="" disabled selected></option>
+              <option value=true>No</option>
+              <option value=false>Yes</option>
     </select>
-            <label>Clinically Obese?</label>
+            <label>Considered Overweight?</label>
           </div>
+
           <div class="col s1"></div>
         </div>
         <div class="row">
+
+
           <div class="col s3"></div>
+
 
 
 
@@ -95,4 +99,7 @@
       <div class="col s2"></div>
       </div>
     </div>
+    <button class="btn waves-effect waves-light" type="submit" name="sendprofilez" id="sendprofile">Submit
+      <i class="material-icons right">send</i>
+    </button>
 </main>
