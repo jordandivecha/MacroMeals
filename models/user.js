@@ -1,20 +1,32 @@
 
 module.exports = function(sequelize, DataTypes) {
 
-var User = sequelize.define("User", {
+var User = sequelize.define('user', {
+  id: {
+    autoIncrement: true,
+    primaryKey: true,
+    type: DataTypes.INTEGER
+  },
+
   firstname: {
     type: DataTypes.STRING,
-    allowNull: false,
+    notEmpty: true
   },
 
   lastname: {
     type: DataTypes.STRING,
-    allowNull: false,
+    notEmpty: true
   },
 
   username: {
     type: DataTypes.STRING,
+    notEmpty:true
   },
+
+  password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
 
   gender: {
     type: DataTypes.STRING,
@@ -72,7 +84,11 @@ var User = sequelize.define("User", {
 
   calories: {
     type: DataTypes.INTEGER,
-  }
+  },
+  status: {
+            type: DataTypes.ENUM('active', 'inactive'),
+            defaultValue: 'active'
+        }
 });
 
   return User;
