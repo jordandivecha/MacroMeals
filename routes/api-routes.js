@@ -5,6 +5,7 @@ var db = require("../models");
 module.exports = function (app){
 
 app.put ("/profile", function (req, res) {
+ var id = req.session.passport.user;
   var mifflinStJeor = req.body.mifflinStJeor;
 if (req.body.mifflinStJeor === "true"){
   req.body.mifflinStJeor = true;
@@ -65,13 +66,13 @@ var goal = parseFloat(req.body.goal);
           carbs: profile.carbs
         },
 
-        {where: {id: 1}}
+        {where: {id: id}}
 
       ).then(function(err, result) {
         if (err){
           console.log (err);
         }
-         console.log(result);
+         res.json(profile);
          res.end();
       });
 
@@ -82,4 +83,6 @@ var goal = parseFloat(req.body.goal);
 });
 
 });
+
+
 };

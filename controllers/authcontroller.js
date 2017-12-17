@@ -13,8 +13,9 @@ exports.signin = function(req, res) {
 };
 
 exports.dashboard = function(req, res) {
-
-    res.render('dashboard');
+    var user = {
+      id: res.session.passport.user};
+    res.render('dashboard', user );
 
 };
 

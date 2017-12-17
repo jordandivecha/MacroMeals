@@ -5,27 +5,34 @@ module.exports = function (app){
 //   res.render("index");
 // });
 
-
+var db = require("../models");
 // sends user to login page
 app.get("/dashboard", function(req, res){
-  res.render("dashboard");
+res.render("dashboard");
+
+
 });
 
 
-// sends to user profile
 app.get("/profile", function(req, res){
+
+
   res.render("profile");
+
 });
 
 
-// sends users to recipe search page
-app.get("/mealsearch", function(req, res){
-  res.render("mealsearch");
-});
+app.get("/index", function(req,res){
+  var id = req.session.passport.user;
 
+  db.user.findAll(
+    {where:
+      {id: id}
+    }
+  ).then(function(err, result) {
+    console.log(result);
+    res.render("index", {result: result});
 
-// sends users to saved meals
-app.get("/mealbox", function(req, res){
-  res.render("mealbox");
+  });
 });
 };
