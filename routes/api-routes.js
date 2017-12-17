@@ -46,7 +46,7 @@ var goal = parseFloat(req.body.goal);
       console.log(JSON.stringify(profile, null, 2));
 
 
-      db.User.update(
+      db.user.update(
         {
           firstname : profile.firstname,
           lastname: profile.lastname,
