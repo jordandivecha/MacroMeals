@@ -1,6 +1,9 @@
 var calculator = require ("./calculator.js");
-
+var bodyparser = require("body-parser");
 var db = require("../models");
+
+var unirest = require("unirest");
+var searchbuilder = require("./searchbuilder.js");
 
 module.exports = function (app){
 
@@ -84,5 +87,25 @@ var goal = parseFloat(req.body.goal);
 
 });
 
+app.post("/api/mealsearch", function(req,res){
+  // variable templates - getting from user calories, carbs, fat, and protein
 
+  var usercalories = parseFloat(req.body.calories);
+  var userprotein = parseFloat(req.body.protein);
+  var usercarbs = parseFloat(req.body.carbs);
+  var userfat= parseFloat(req.body.fat);
+
+  searchbuilder(usercalories, userprotein, usercarbs, userfat, function(searchbuilder){
+    var url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByNutrients?maxCalories=" + searchbuilder.maxCalories + "&maxCarbs=" + searchbuilder.maxCarbs + "&maxFat=" + searchbuilder.maxFat + "&maxProtein=" + searchbuilder.maxProtein + "&minCalories=" + searchbuilder.minCalories + "&minCarbs=" + searchbuilder.minCarbs + "&minFat=" + searchbuilder.minFat + "&minProtein=" + searchbuilder.minProtein + "&number=10&offset=0&random=false";
+
+
+    unirest.get(url)
+    .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
+    .header("Accept", "application/json")
+    .end(function (result) {
+      console.log(result.status, result.headers, result.body);
+      res.json(result.body);
+  });
+});
+});
 };
