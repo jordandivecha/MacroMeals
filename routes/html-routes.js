@@ -51,4 +51,8 @@ app.get("/mealsearch", function (req,res){
 app.get("/mealbox", function (req,res){
   res.render("mealbox");
 });
+
+app.get("/ingredientsearch", function (req,res){
+  res.render("ingredientsearch");
+});
 };
