@@ -1,3 +1,5 @@
+
+
 CREATE table meals (
 
 id INT AUTO_INCREMENT NOT NULL,
@@ -33,6 +35,19 @@ fat DECIMAL(5,2)
 carbs DECIMAL(5,2)
 calories DECIMAL(5,2)
 createdAt timestamp DEFAULT CURRENT_TIMESTAMP,
-PRIMARY KEY (id)
+PRIMARY KEY(id)
 
 )
+
+CREATE table ingredients (
+
+id INT AUTO_INCREMENT NOT NULL,
+title VARCHAR(255),
+image VARCHAR(255),
+link VARCHAR(255),
+createdAt timestamp DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY(id)
+
+)
+
+
