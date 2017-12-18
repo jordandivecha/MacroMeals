@@ -29,30 +29,30 @@
           </div>
           <div class="input-field col s2">
 
-            <input id="age" type="number" class="validate">
-            <label for="age">Age</label>
+            <input id="age" type="number" class="validate" min="1" max="100">
+            <label for="age"  data-error="Invalid input.">Age</label>
           </div>
 
           <div class="col s2">
 
             <div class="input-field inline">
-              <input id="ft" type="number" class="validate">
-              <label for="ft">Feet</label>
+              <input id="ft" type="number" class="validate" min="2" max="8">
+              <label for="ft" data-error="Invalid input.">Feet</label>
               <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
             </div>
           </div>
           <div class="col s2">
 
             <div class="input-field inline">
-              <input id="inches" type="number" class="validate">
-              <label for="inches">Inches</label>
+              <input id="inches" type="number" class="validate" min="0" max="11">
+              <label for="inches" data-error="Invalid input.">Inches</label>
               <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
             </div>
           </div>
           <div class="input-field col s3">
 
-            <input id="lbs" type="number" class="validate">
-            <label for="lbs">Weight</label>
+            <input id="lbs" type="number" class="validate" min="4" max="1400">
+            <label for="lbs" data-error="Invalid input.">Weight</label>
           </div>
         </div>
         <div class="row">
