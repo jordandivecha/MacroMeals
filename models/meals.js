@@ -4,11 +4,11 @@ module.exports = function (sequelize, DataTypes){
     link: DataTypes.STRING,
     name: DataTypes.STRING,
     title: DataTypes.STRING,
-    calories: DataTypes.FLOAT,    
-    protein: DataTypes.FLOAT,    
-    fat: DataTypes.FLOAT,    
+    calories: DataTypes.FLOAT,
+    protein: DataTypes.FLOAT,
+    fat: DataTypes.FLOAT,
     carbs: DataTypes.FLOAT
-    
+
 
   });
 

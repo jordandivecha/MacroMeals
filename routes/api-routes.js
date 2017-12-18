@@ -108,4 +108,20 @@ app.post("/api/mealsearch", function(req,res){
   });
 });
 });
+
+app.post("/mealbox", function(req,res){
+  var id = req.session.passport.user;
+  db.Meal.create({
+    userId: id,
+    image: req.body.image,
+    link: req.body.link,
+    title: req.body.title,
+    calories: req.body.calories,
+    fat: req.body.fat,
+    protein: req.body.protein
+
+  }).then(function(err,res){
+    console.log("result");
+  });
+});
 };

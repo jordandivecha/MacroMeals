@@ -37,6 +37,18 @@ app.get("/index", function(req,res){
 });
 
 app.get("/mealsearch", function (req,res){
-  res.render("mealsearch");
+  var id = req.session.passport.user;
+  console.log(id);
+  db.user.findAll(
+    {where: {"id": id}}
+
+  ).then(function(err, result) {
+    console.log(result);
+  res.render("mealsearch", {mealsearch: result});
+});
+});
+
+app.get("/mealbox", function (req,res){
+  res.render("mealbox");
 });
 };
