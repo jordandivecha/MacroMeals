@@ -31,14 +31,14 @@
     position: relative;
 
     .card-image {
-      max-height: 60%;
+      max-height: 40%;
       overflow: hidden;
     }
     .card-image + .card-content {
-      max-height: 40%;
+      max-height: 30%;
     }
     .card-content {
-      max-height: 100%;
+      max-height: 80%;
       overflow: hidden;
     }
     .card-action {
@@ -81,7 +81,7 @@
       max-width: 50%;
       img {
         border-radius: 2px 0 0 2px;
-        max-width: 100%;
+        max-width: 50%;
         width: auto;
       }
     }
