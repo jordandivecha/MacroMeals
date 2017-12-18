@@ -5,6 +5,8 @@ var db = require("../models");
 var unirest = require("unirest");
 var searchbuilder = require("./searchbuilder.js");
 
+// var ingredientBuilder = require("./ingredientBuilder.js");
+
 module.exports = function (app){
 
 app.put ("/profile", function (req, res) {
@@ -128,9 +130,15 @@ app.post("/mealbox", function(req,res){
   });
 });
 
+// =========================================
+
 // Search recipes by ingredients
 
+// =========================================
+
 app.post("/api/ingredientsearch", function(req, res) {
+
+  console.log(req.body);
 
   var ingredientOne = req.body.ingredientOne;
   var ingredientTwo = req.body.ingredientTwo;
@@ -138,14 +146,23 @@ app.post("/api/ingredientsearch", function(req, res) {
   var ingredientFour = req.body.ingredientFour;
   var ingredientFive = req.body.ingredientFive;
 
-  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=15&ranking=1")
-  .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
-  .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
-  .end(function (result) {
-    console.log(result.body);
+  
+  
+
+    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=15&ranking=2")
+    .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
+    .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
+    .end(function (result) {
+      console.log(result.body);
+      res.json(result.body);
 
 
-    });
+      });
+
+
+ 
+
+  
 
   });
 
