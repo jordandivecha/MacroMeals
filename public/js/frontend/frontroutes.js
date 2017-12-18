@@ -121,7 +121,7 @@ $("#sendprofile").on("click", function(event) {
         recipeCardContent.append(recipeCardLink);
 
         recipeCard.append(recipeCardContent);
-        recipeCardSave.append('<i class="material-icons">save</i>').attr("calories", result[i].calories).attr("protein", result[i].protein).attr("carbs", result[i].carbs).attr("fat", result[i].fat).attr("image", recipeimage).attr("title", recipetitle).attr("recipeid", recipeid).attr("link", url);
+        recipeCardSave.append('<i class="material-icons">save</i>').attr("calories", parseFloat(result[i].calories)).attr("protein", parseFloat(result[i].protein)).attr("carbs", parseFloat(result[i].carbs)).attr("fat", parseFloat(result[i].fat)).attr("image", recipeimage).attr("title", recipetitle).attr("recipeid", recipeid).attr("link", url);
 
         recipeCard.append(recipeCardSave);
 
@@ -135,7 +135,7 @@ $("#sendprofile").on("click", function(event) {
 
   $(document).on('click', ".saverecipe", function(event){
     event.preventDefault();
-    console.log("I've been clicked");
+    Materialize.toast('Recipe Saved!', 2000);
 
     var recipesave ={
       calories: $(this).attr("calories"),
@@ -152,7 +152,7 @@ $("#sendprofile").on("click", function(event) {
       url: "/mealbox",
       data: recipesave
     }).done(function(result){
-       Materialize.toast('Recipe Saved!', 4000);
+
     }
 
 

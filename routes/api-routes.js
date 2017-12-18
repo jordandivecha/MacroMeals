@@ -98,7 +98,7 @@ app.post("/api/mealsearch", function(req,res){
   var userfat= parseFloat(req.body.fat);
 
   searchbuilder(usercalories, userprotein, usercarbs, userfat, function(searchbuilder){
-    var url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByNutrients?maxCalories=" + searchbuilder.maxCalories + "&maxCarbs=" + searchbuilder.maxCarbs + "&maxFat=" + searchbuilder.maxFat + "&maxProtein=" + searchbuilder.maxProtein + "&minCalories=" + searchbuilder.minCalories + "&minCarbs=" + searchbuilder.minCarbs + "&minFat=" + searchbuilder.minFat + "&minProtein=" + searchbuilder.minProtein + "&number=10&offset=0&random=false";
+    var url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByNutrients?maxCalories=" + searchbuilder.maxCalories + "&maxCarbs=" + searchbuilder.maxCarbs + "&maxFat=" + searchbuilder.maxFat + "&maxProtein=" + searchbuilder.maxProtein + "&minCalories=" + searchbuilder.minCalories + "&minCarbs=" + searchbuilder.minCarbs + "&minFat=" + searchbuilder.minFat + "&minProtein=" + searchbuilder.minProtein + "&number=25&offset=0&random=false";
 
 
     unirest.get(url)
@@ -149,7 +149,7 @@ app.post("/api/ingredientsearch", function(req, res) {
 
 
 
-    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=15&ranking=2")
+    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=25&ranking=2")
     .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
     .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
     .end(function (result) {
