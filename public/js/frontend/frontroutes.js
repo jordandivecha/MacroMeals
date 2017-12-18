@@ -1,5 +1,27 @@
 
+$(document).on('click', ".deletebtn", function(event){
+  event.preventDefault();
+  console.log("I've been clicked");
+  var id = $(this).attr("recipeid");
+  $.ajax({
+    method: "DELETE",
+    url: '/mealbox/'+id
+  }).done(function(result){
+    window.location.href = "/mealbox";
+     Materialize.toast('Recipe Deleted!', 4000);
+  }
 
+
+);
+
+
+});
+
+$("#signupbutton").on("click", function(event){
+  event.preventDefault();
+  console.log("I've been clicked!");
+  window.location.href = "/signup";
+});
 $("#sendprofile").on("click", function(event) {
     // event.preventDefault();
     console.log("i've been clicked");
@@ -169,4 +191,5 @@ $("#sendprofile").on("click", function(event) {
       }
 
 
-  })
+  });
+});

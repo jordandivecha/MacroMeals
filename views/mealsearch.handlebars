@@ -1,23 +1,25 @@
 <main class="main">
   <div class="row">
+    <h1 class="usertitle"> Meal Search </h1>
+    <h4><center>Find and save meals based on your macros!<center></h4>
     <div class = "col s2"></div>
     <div class="input-field col s2">
-      <input id="calories" type="number" class="validate" placeholder="{{this.calories}}">
+      <input id="calories" type="number" class="validate" value={{this.caloriesmeal}} >
       <label for="calories">Calories</label>
     </div>
 
     <div class="input-field col s2">
-      <input id="protein" type="number" class="validate" placeholder= "{{this.protein}}">
+      <input id="protein" type="number" class="validate" value= {{this.proteinmeal}}>
       <label for="protein">Protein (g)</label>
     </div>
 
     <div class="input-field col s2">
-      <input id="carbs" type="number" class="validate" placeholder= "{{this.carbs}}">
+      <input id="carbs" type="number" class="validate" value= {{this.carbsmeal}} >
       <label for="carbs">Carbs (g)</label>
     </div>
 
     <div class="input-field col s2">
-      <input id="fat" type="number" class="validate" placeholder= "{{this.fat}}">
+      <input id="fat" type="number" class="validate" value= {{this.fatmeal}}>
       <label for="fat">Fat (g)</label>
     </div>
 

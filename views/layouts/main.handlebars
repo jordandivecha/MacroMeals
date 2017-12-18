@@ -24,10 +24,10 @@
       <div class="background" >
         <img src="https://images.pexels.com/photos/255501/pexels-photo-255501.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" height=300px width=200px>
       </div>
-      <a href="#!user"><img class="circle userpicside" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"></a>
+      <img class="circle userpicside" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
 			<div class = "userinfoside">
-      <a href="#!name"><span class="white-text name">Bob Jones</span></a>
-      <a href="#!username"><span class="white-text username">coolbobfit</span></a>
+      <span class="white-text name">{{this.firstname}}</span></a>
+      <span class="white-text username">{{this.username}}</span></a>
 		</div>
     </div> </li>
 		<div class ="sidelinks">
@@ -40,7 +40,7 @@
 				<div class = "macrosmini">
 					<span class = "black-text macrotitleside">Daily Macros</span><br>
 					<span class="white-text caloriesside">Calories: {{this.calories}}</span><br>
-		     <span class="white-text carbsside">Carbs: {{this.carb}} </span><br>
+		     <span class="white-text carbsside">Carbs: {{this.carbs}} </span><br>
 					<span class="white-text fatside">Fat: {{this.fat}}</span><br>
 		      <span class="white-text proteinside">Protein: {{this.protein}}</span>
 				</div>
