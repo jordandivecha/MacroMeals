@@ -63,7 +63,7 @@ $("#sendprofile").on("click", function(event) {
       var recipeCardContent = $('<div class="card-content">');
       var recipeCardMacros = $("<p class = 'recipecalories' >Calories(g): "+ result[i].calories +"</p><br><p class = 'recipeprotein'>Protein(g): "+ result[i].protein + "</p> <br> <p class='recipecarbs'>Carbs(g): "+ result[i].carbs +" </p><br> <p class='recipefat'>Fat(g): " + result[i].fat + "</p><br>");
       var recipeCardLink = $('<a id = "recipelink">Recipe Link</a>');
-      var recipeCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red'  id ='saverecipe' </a>");
+      var recipeCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red saverecipe' </a>");
 
         recipeCard.append(recipeCardImage);
         recipeCard.append(recipeCardTitle);
@@ -85,18 +85,18 @@ $("#sendprofile").on("click", function(event) {
 
   });
 
-  $("#saverecipe").on('click', function(event){
-
+  $(document).on('click', ".saverecipe", function(event){
+    event.preventDefault();
     console.log("I've been clicked");
 
     var recipesave ={
-      calories: $(this).calories.val(),
-      protein: $(this).protein.val(),
-      carbs: $(this).carbs.val(),
-      fat: $(this).fat.val(),
-      image: $(this).image.val(),
-      link: $(this).link.val(),
-      title: $(this).title.val()
+      calories: $(this).attr("calories"),
+      protein: $(this).attr("protein"),
+      carbs: $(this).attr("carbs"),
+      fat: $(this).attr("fat"),
+      image: $(this).attr("image"),
+      link: $(this).attr("link"),
+      title: $(this).attr("title")
     };
     console.log(recipesave);
     $.ajax({
