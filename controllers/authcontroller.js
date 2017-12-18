@@ -13,9 +13,14 @@ exports.signin = function(req, res) {
 };
 
 exports.dashboard = function(req, res) {
-    var user = {
-      id: res.session.passport.user};
-    res.render('dashboard', user );
+    var user = res.session.passport.user;
+    db.user.findAll({
+
+    }).then(function (err, res){
+      console.log(res);
+      res.render('dashboard', {user: res});
+    });
+
 
 };
 

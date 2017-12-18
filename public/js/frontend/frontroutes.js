@@ -61,7 +61,7 @@ $("#sendprofile").on("click", function(event) {
       var recipeCardImage = $("<div class = 'card-image' id= 'recipeimage'><img src='"+ recipeimage +"'>");
       var recipeCardTitle = $("<span class = 'card-title'>"+recipetitle+"</span>");
       var recipeCardContent = $('<div class="card-content">');
-      var recipeCardMacros = $("<p class = 'recipecalories' >Calories(g): "+ result[i].calories +"</p><br><p class = 'recipeprotein'>Protein(g): "+ result[i].protein + "</p> <br> <p class='recipecarbs'>Carbs(g): "+ result[i].carbs +" </p><br> <p class='recipefat'>Fat(g): " + result[i].fat + "</p><br>");
+      var recipeCardMacros = $("<p class = 'recipecalories' >Calories(g): "+ parseFloat(result[i].calories) +"</p><br><p class = 'recipeprotein'>Protein(g): "+ parseFloat(result[i].protein) + "</p> <br> <p class='recipecarbs'>Carbs(g): "+ parseFloat(result[i].carbs) +" </p><br> <p class='recipefat'>Fat(g): " + parseFloat(result[i].fat) + "</p><br>");
       var recipeCardLink = $('<a id = "recipelink">Recipe Link</a>');
       var recipeCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red saverecipe' </a>");
 
@@ -73,12 +73,22 @@ $("#sendprofile").on("click", function(event) {
         recipeCardContent.append(recipeCardLink);
 
         recipeCard.append(recipeCardContent);
-        recipeCardSave.append('<i class="material-icons">save</i>').attr("calories", result[i].calories).attr("protein", result[i].protein).attr("carbs", result[i].carbs).attr("fat", result[i].fat).attr("image", recipeimage).attr("title", recipetitle).attr("recipeid", recipeid).attr("link", url);
+
+        recipeCardSave.append('<i class="material-icons">bookmark</i>')
+        .attr("calories", parseFloat(result[i].calories))
+        .attr("protein", parseFloat(result[i].protein))
+        .attr("carbs", parseFloat(result[i].carbs))
+        .attr("fat", parseFloat(result[i].fat))
+        .attr("image", recipeimage)
+        .attr("title", recipetitle)
+        .attr("recipeid", recipeid)
+        .attr("link", url);
 
         recipeCard.append(recipeCardSave);
 
         $('#reciperesults').append(recipeCard);
-
+        console.log(parseFloat(result[i].carbs));
+        console.log(result[i].carbs);
 
     }
   });

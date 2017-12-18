@@ -112,6 +112,7 @@ app.post("/api/mealsearch", function(req,res){
 app.post("/mealbox", function(req,res){
   var id = req.session.passport.user;
   console.log(req.body.link, req.body.title);
+
   db.Meal.create({
     userId: id,
     image: req.body.image,
@@ -119,7 +120,8 @@ app.post("/mealbox", function(req,res){
     title: req.body.title,
     calories: req.body.calories,
     fat: req.body.fat,
-    protein: req.body.protein
+    protein: req.body.protein,
+    carbs: req.body.carbs
 
   }).then(function(err,res){
     console.log("result");
