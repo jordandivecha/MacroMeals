@@ -72,7 +72,7 @@ $("#sendprofile").on("click", function(event) {
       url: "/profile",
       data: userprofile})
       .done(function (){
-      window.location.href = "/profile";
+      window.location.href = "/mealsearch";
     });
 
 
