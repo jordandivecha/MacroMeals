@@ -31,7 +31,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
 app.use(express.static("public"));
-app.listen(8080, function(err) {
+app.listen(PORT, function(err) {
 
     if (!err)
         console.log("Site is live");
