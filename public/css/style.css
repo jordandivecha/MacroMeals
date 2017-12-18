@@ -3400,12 +3400,12 @@ small {
   .card.small, .card.medium, .card.large {
     position: relative; }
     .card.small .card-image, .card.medium .card-image, .card.large .card-image {
-      max-height: 60%;
+      max-height: 40%;
       overflow: hidden; }
     .card.small .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {
-      max-height: 40%; }
+      max-height: 30%; }
     .card.small .card-content, .card.medium .card-content, .card.large .card-content {
-      max-height: 100%;
+      max-height: 80%;
       overflow: hidden; }
     .card.small .card-action, .card.medium .card-action, .card.large .card-action {
       position: absolute;
@@ -3430,7 +3430,7 @@ small {
       max-width: 50%; }
       .card.horizontal .card-image img {
         border-radius: 2px 0 0 2px;
-        max-width: 100%;
+        max-width: 50%;
         width: auto; }
     .card.horizontal .card-stacked {
       display: flex;
@@ -6893,5 +6893,12 @@ form {
 
 .mainloggedout {
   padding-left: 0px; }
+
+.recipecard {
+  max-width: 400px !important;
+  float: right;
+  margin: 25px;
+  max-height: 700px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

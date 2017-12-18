@@ -22,35 +22,23 @@
     </div>
 
     <div class="row">
-      <div class="col s10"></div>
-        <div class="col s2">
+      <div class="col s8"></div>
+        <div class="col s3">
           <button class="btn waves-effect waves-light" id="submitsearch" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
           </button>
         </div>
+        <div class = "col s1"></div>
     </div>
-<div class = "col s2"></div>
+
   </div>
 
 <div class = "row">
-  {{#each recipes}}
-   <div class="col s12 m6">
-     <div class="card" id="recipe{{this.id}}">
-       <div class="card-image">
-         <img src={{this.image}}>
-         <span class="card-title">{{this.title}}</span>
-         <a class="btn-floating halfway-fab waves-effect waves-light red savebtn"><i class="material-icons">save</i></a>
-       </div>
-       <div class="card-content">
-         <p>Calories(g): {{this.calories}}</p>
-         <p>Protein(g): {{this.protein}}</p>
-         <p>Carbs(g): {{this.carbs}}</p>
-         <p>Fat(g): {{this.fat}}</p>
-           <a href={{this.link}}>Click to Recipe</a>
-       </div>
-     </div>
-   </div>
-  {{/each}}
+  <div class = "col s1"></div>
+  <div class = "col s10" id="reciperesults">
+
+  </div>
+  <div class = "col s1"></div>
 </div>
 
 </main>
