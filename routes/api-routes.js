@@ -73,7 +73,7 @@ var goal = parseFloat(req.body.goal);
 
         {where: {id: id}}
 
-      ).then(function(err, result) {
+      ).then(function(result) {
         if (err){
           console.log (err);
         }
@@ -125,8 +125,8 @@ app.post("/mealbox", function(req,res){
     protein: req.body.protein,
     carbs: req.body.carbs
 
-  }).then(function(err,res){
-    console.log("result");
+  }).then(function(result){
+    console.log(result);
   });
 });
 
@@ -146,8 +146,8 @@ app.post("/api/ingredientsearch", function(req, res) {
   var ingredientFour = req.body.ingredientFour;
   var ingredientFive = req.body.ingredientFive;
 
-  
-  
+
+
 
     unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=15&ranking=2")
     .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
@@ -160,9 +160,9 @@ app.post("/api/ingredientsearch", function(req, res) {
       });
 
 
- 
 
-  
+
+
 
   });
 
@@ -178,5 +178,19 @@ app.delete("/mealbox/:id", function (req, res){
   });
 
 
+});
+
+app.post("/ingredientsbox", function (req,res){
+  var id = req.session.passport.user;
+
+  db.Ingredient.create({
+    userId: id,
+    image: req.body.image,
+    link: req.body.link,
+    title: req.body.title,
+
+  }).then(function(result){
+    console.log("yay");
+  });
 });
 };
