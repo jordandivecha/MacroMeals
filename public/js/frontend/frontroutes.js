@@ -101,7 +101,7 @@ $("#sendprofile").on("click", function(event) {
     console.log(recipesave);
     $.ajax({
       method: "POST",
-      url: "/api/mealbox",
+      url: "/mealbox",
       data: recipesave
     }).done(function(result){
        Materialize.toast('Recipe Saved!', 4000);
