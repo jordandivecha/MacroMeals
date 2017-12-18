@@ -39,4 +39,8 @@ app.get("/index", function(req,res){
 app.get("/mealsearch", function (req,res){
   res.render("mealsearch");
 });
+
+app.get("/ingredientsearch", function (req,res){
+  res.render("ingredientsearch");
+});
 };
