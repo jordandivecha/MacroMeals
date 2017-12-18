@@ -111,6 +111,7 @@ app.post("/api/mealsearch", function(req,res){
 
 app.post("/mealbox", function(req,res){
   var id = req.session.passport.user;
+  console.log(req.body.link, req.body.title);
   db.Meal.create({
     userId: id,
     image: req.body.image,
