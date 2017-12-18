@@ -99,7 +99,7 @@ User.associate = function(models) {
 
 User.associate = function(models) {
 
-  User.hasMany(ingredient.Meal, {
+  User.hasMany(models.Ingredient, {
     onDelete: "cascade"
   });
 
