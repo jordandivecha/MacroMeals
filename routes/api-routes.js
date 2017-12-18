@@ -157,6 +157,7 @@ app.delete("/mealbox/:id", function (req, res){
     }
   }).then(function(result){
     console.log("Deleted recipe.");
+    res.json(result);
   });
 
 
