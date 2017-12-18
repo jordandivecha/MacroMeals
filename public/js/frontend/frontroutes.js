@@ -47,7 +47,7 @@ $("#sendprofile").on("click", function(event) {
   }).done(function(result){
     for (var i =0; i<result.length; i++ ){
 
-      var baseurl = "http://spoonacular.com/recipe/";
+      var baseurl = "https://spoonacular.com/recipe/";
       var recipetitle = result[i].title;
       var recipeid = result[i].id;
       var recipeimage= result[i].image;
