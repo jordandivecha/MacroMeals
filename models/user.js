@@ -84,11 +84,8 @@ var User = sequelize.define('user', {
 
   calories: {
     type: DataTypes.INTEGER,
-  },
-  status: {
-            type: DataTypes.ENUM('active', 'inactive'),
-            defaultValue: 'active'
-        }
+  }
+  
 });
 
 
