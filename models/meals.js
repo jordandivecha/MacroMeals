@@ -2,7 +2,6 @@ module.exports = function (sequelize, DataTypes){
   var Meal = sequelize.define("Meal", {
     image: DataTypes.STRING,
     link: DataTypes.STRING,
-    name: DataTypes.STRING,
     title: DataTypes.STRING,
     calories: DataTypes.FLOAT,
     protein: DataTypes.FLOAT,
