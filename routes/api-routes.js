@@ -125,4 +125,26 @@ app.post("/mealbox", function(req,res){
     console.log("result");
   });
 });
+
+// Search recipes by ingredients 
+
+app.post("/api/ingredientsearch", function(req, res) {
+
+  var ingredientOne = req.body.ingredientOne;
+  var ingredientTwo = req.body.ingredientTwo; 
+  var ingredientThree = req.body.ingredientThree;
+  var ingredientFour = req.body.ingredientFour;
+  var ingredientFive = req.body.ingredientFive;
+
+  unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=15&ranking=1")
+  .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
+  .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
+  .end(function (result) {
+    console.log(result.body);    
+
+   
+    });
+
+  });
+
 };
