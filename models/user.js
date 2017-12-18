@@ -85,13 +85,21 @@ var User = sequelize.define('user', {
   calories: {
     type: DataTypes.INTEGER,
   }
-  
+
 });
 
 
 User.associate = function(models) {
 
   User.hasMany(models.Meal, {
+    onDelete: "cascade"
+  });
+
+};
+
+User.associate = function(models) {
+
+  User.hasMany(ingredient.Meal, {
     onDelete: "cascade"
   });
 
