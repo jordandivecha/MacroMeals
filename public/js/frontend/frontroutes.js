@@ -17,6 +17,32 @@ $(document).on('click', ".deletebtn", function(event){
 
 });
 
+$(document).on('click', ".saveingredients", function(event){
+  event.preventDefault();
+  console.log("I've been clicked");
+
+  var ingredientssave ={
+
+    image: $(this).attr("image"),
+    link: $(this).attr("link"),
+    title: $(this).attr("title")
+
+  };
+  console.log(ingredientssave);
+  $.ajax({
+    method: "POST",
+    url: "/ingredientsbox",
+    data: ingredientssave
+  }).done(function(result){
+     Materialize.toast('Recipe Saved!', 4000);
+  }
+
+
+);
+
+
+});
+
 $("#signupbutton").on("click", function(event){
   event.preventDefault();
   console.log("I've been clicked!");
@@ -158,34 +184,33 @@ $("#sendprofile").on("click", function(event) {
       for (var i =0; i<result.length; i++ ){
 
         var baseurl = "https://spoonacular.com/recipe/";
-        var recipetitle = result[i].title;
-        var recipeid = result[i].id;
-        var recipeimage= result[i].image;
-        recipetitledashes = recipetitle.replace(/\s+/g, '-').toLowerCase();
-        var url = baseurl + recipetitledashes + "-" + recipeid;
+        var ingredientstitle = result[i].title;
+        var ingredientsid = result[i].id;
+        var ingredientsimage= result[i].image;
+        ingredientstitledashes = ingredientstitle.replace(/\s+/g, '-').toLowerCase();
+        var url = baseurl + ingredientstitledashes + "-" + ingredientsid;
         console.log(url);
 
-        var recipeCard = $("<div class = 'card recipecard' id = 'recipecard"+recipeid+"' >");
-        var recipeCardImage = $("<div class = 'card-image' id= 'recipeimage'><img src='"+ recipeimage +"'>");
-        var recipeCardTitle = $("<span class = 'card-title'>"+recipetitle+"</span>");
-        var recipeCardContent = $('<div class="card-content">');
-        var recipeCardMacros = $("<p class = 'recipecalories' >Calories(g): "+ result[i].calories +"</p><br><p class = 'recipeprotein'>Protein(g): "+ result[i].protein + "</p> <br> <p class='recipecarbs'>Carbs(g): "+ result[i].carbs +" </p><br> <p class='recipefat'>Fat(g): " + result[i].fat + "</p><br>");
-        var recipeCardLink = $('<a id = "recipelink">Recipe Link</a>');
-        var recipeCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red saverecipe' </a>");
+        var ingredientsCard = $("<div class = 'card ingredientscard' id = 'ingredientscard"+recipeid+"' >");
+        var ingredientsCardImage = $("<div class = 'card-image' id= 'ingredientsimage'><img src='"+ ingredientsimage +"'>");
+        var ingredientsCardTitle = $("<span class = 'card-title'>"+ingredientstitle+"</span>");
+        var ingredientsCardContent = $('<div class="card-content">');
+        var ingredientsCardLink = $('<a id = "recipelink">Recipe Link</a>');
+        var recipeCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red saveingredients' </a>");
 
           recipeCard.append(recipeCardImage);
           recipeCard.append(recipeCardTitle);
 
-          recipeCardContent.append(recipeCardMacros);
+
           recipeCardLink.attr("href", url).attr("target", "_blank");
           recipeCardContent.append(recipeCardLink);
 
           recipeCard.append(recipeCardContent);
-          recipeCardSave.append('<i class="material-icons">save</i>').attr("calories", result[i].calories).attr("protein", result[i].protein).attr("carbs", result[i].carbs).attr("fat", result[i].fat).attr("image", recipeimage).attr("title", recipetitle).attr("recipeid", recipeid).attr("link", url);
+          recipeCardSave.append('<i class="material-icons">save</i>').attr("image", ingredientsimage).attr("title", recipetitle).attr("ingredientsid", ingredientsid).attr("link", url);
 
           recipeCard.append(recipeCardSave);
 
-          $('#reciperesults').append(recipeCard);
+          $('#ingredientsresults').append(recipeCard);
 
 
       }
