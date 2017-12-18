@@ -128,12 +128,12 @@ app.post("/mealbox", function(req,res){
   });
 });
 
-// Search recipes by ingredients 
+// Search recipes by ingredients
 
 app.post("/api/ingredientsearch", function(req, res) {
 
   var ingredientOne = req.body.ingredientOne;
-  var ingredientTwo = req.body.ingredientTwo; 
+  var ingredientTwo = req.body.ingredientTwo;
   var ingredientThree = req.body.ingredientThree;
   var ingredientFour = req.body.ingredientFour;
   var ingredientFive = req.body.ingredientFive;
@@ -142,11 +142,23 @@ app.post("/api/ingredientsearch", function(req, res) {
   .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
   .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
   .end(function (result) {
-    console.log(result.body);    
+    console.log(result.body);
 
-   
+
     });
 
   });
 
+app.delete("/mealbox/:id", function (req, res){
+  var id = req.params.id;
+  db.Meal.destroy({
+    where: {
+      id: id
+    }
+  }).then(function(result){
+    console.log("Deleted recipe.");
+  });
+
+
+});
 };

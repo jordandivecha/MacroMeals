@@ -1,26 +1,27 @@
-
+<main>
 <div class = "row">
   <div class = "col s1"></div>
-  <div class = "col s10" id="mealbox">
-    <div class="row">
+  <div class = "col s10 mealbox">
+    {{#each recipes}}
     <div class="col s12 m6">
       <div class="card">
         <div class="card-image">
-          <img src="{{this.image}}">
-          <span class="card-title">{{this.title}}</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red sharebtn"><i class="material-icons">share</i></a>
-          <a class="btn-floating halfway-fab waves-effect waves-light red deletebtn"><i class="material-icons">delete</i></a>
+          <img src="{{this.dataValues.image}}">
+          <span class="card-title">{{this.dataValues.title}}</span>
         </div>
         <div class="card-content">
-          <p>Calories: {{this.calories}}</p><br>
-          <p>Protein: {{this.protein}}</p><br>
-          <p>Carbs: {{this.carbs}}</p><br>
-          <p>Fat: {{this.fat}}</p><br>
-          <a id = "recipelink" href={{this.link}}>Recipe Link</a>
+          <p>Calories: {{this.dataValues.calories}}</p><br>
+          <p>Protein: {{this.dataValues.protein}}</p><br>
+          <p>Carbs: {{this.dataValues.carbs}}</p><br>
+          <p>Fat: {{this.dataValues.fat}}</p><br>
+          <a id = "recipelink" href={{this.dataValues.link}}>Recipe Link</a>
+          <a class="btn-floating halfway-fab waves-effect waves-light red sharebtn"><i class="material-icons">share</i></a>
+          <a class="btn-floating halfway-fab waves-effect waves-light red deletebtn"><i class="material-icons">delete</i></a>
 
         </div>
       </div>
     </div>
+    {{/each}}
   </div>
   </div>
   <div class = "col s1"></div>
