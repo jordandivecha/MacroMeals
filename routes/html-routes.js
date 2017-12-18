@@ -52,9 +52,13 @@ app.get("/mealsearch", function (req,res){
 app.get("/mealbox", function (req,res){
   var id = req.session.passport.user;
   console.log(id);
-  db.Meal.findAll({}).then(function(result){
-    console.log(JSON.stringify(result));
-    res.render("mealbox", {mealbox: result});
+  db.Meal.findAll({
+    where:{
+      userId: id
+    }
+  }).then(function(result){
+    console.log(result);
+    res.render("mealbox", {recipes: result});
   });
 
 });
