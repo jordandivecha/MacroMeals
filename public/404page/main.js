@@ -3,5 +3,5 @@ $(document).ready(function(){
 });
 
 $('#redirectBtn').on("click", function(){
-	window.location.href = "/signup"
+	window.location.href = "/signin"
 });

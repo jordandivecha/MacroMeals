@@ -5428,7 +5428,7 @@ input[type=range]:focus::-ms-fill-upper {
     right: 0;
     left: auto; }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 600px) {
   .side-nav.fixed {
     transform: translateX(-105%); }
     .side-nav.fixed.right-aligned {
@@ -6838,9 +6838,16 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 header, main, footer {
   padding-left: 200px; }
 
-@media only screen and (max-width: 992px) {
+a.buttoncollapse {
+  visibility: hidden; }
+
+@media only screen and (max-width: 500px) {
   header, main, footer {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .buttoncollapse {
+    visibility: visible;
+    background-color: black; } }
 body {
   display: flex;
   min-height: 100vh;
@@ -6850,18 +6857,24 @@ main {
   flex: 1 0 auto; }
 
 h1 {
-  color: #C62828; }
+  color: #FFFFFF;
+  font-size: 150px;
+  font-family: "Play", sans-serif;
+  shadow: 3px, 3px, black; }
+
+#meals {
+  color: #7ED102; }
 
 .footer-copyright {
   text-align: center; }
 
 footer {
-  height: 200px;
+  height: 100px;
   padding: unset;
   padding: 10px; }
 
 .footer-copyright {
-  height: 100px; }
+  height: 50px; }
 
 .footerrow {
   max-height: 100px; }
@@ -6932,5 +6945,14 @@ form {
 
 .ingredientsCard .recipeCard {
   width: 20%; }
+
+.main {
+  background-image: url("../img/noms.png");
+  background-repeat: repeat;
+  background-size: cover;
+  margin-top: 0px; }
+
+#sendprofile {
+  margin-top: 15px; }
 
 /*# sourceMappingURL=style.css.map */
