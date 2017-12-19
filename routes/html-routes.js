@@ -1,5 +1,6 @@
 // sends the user to the index page
 var db = require("../models");
+var path = require ("path");
 module.exports = function (app){
 // app.get("/", function(req, res) {
 //
@@ -89,3 +90,7 @@ app.get("/ingredientsearch", function (req,res){
 
 
 };
+
+app.get("/:*", function(req,res){
+  res.sendFile(path.join(__dirname, "/404page/errpage.html"));
+});
