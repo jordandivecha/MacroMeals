@@ -45,10 +45,21 @@ header, main, footer {
   padding-left: 200px;
 }
 
-@media only screen and (max-width : 992px) {
+a.buttoncollapse{
+  visibility: hidden;
+}
+
+
+@media only screen and (max-width : 500px) {
   header, main, footer {
     padding-left: 0;
   }
+
+  .buttoncollapse{
+    visibility: visible;
+    background-color: black;
+  }
+
 }
 body {
   display: flex;
@@ -61,20 +72,28 @@ main {
 }
 
 h1{
-  color: $primary-color;
+  color: #FFFFFF;
+  font-size: 150px;
+  font-family: "Play", sans-serif;
+  shadow: 3px, 3px, black;
+}
+
+#meals{
+  color: #7ED102;
+
 }
 .footer-copyright{
   text-align: center;
 }
 
 footer{
-  height: 200px;
+  height: 100px;
   padding: unset;
   padding: 10px;
 }
 
 .footer-copyright{
-  height: 100px;
+  height: 50px;
 }
 
 .footerrow{
@@ -125,7 +144,7 @@ form {
 }
 
 .recipecard {
-  
+
   float: right;
   margin: 25px;
   max-height: 700px;
@@ -158,4 +177,14 @@ form {
 
 .ingredientsCard .recipeCard {
   width: 20%;
+}
+
+.main{
+  background-image: url("../img/noms.png");
+  background-repeat: repeat;
+  background-size: cover;
+  margin-top: 0px;
+}
+#sendprofile{
+  margin-top: 15px;
 }

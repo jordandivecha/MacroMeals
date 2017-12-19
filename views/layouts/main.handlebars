@@ -24,7 +24,7 @@
       <div class="background" >
         <img src="https://images.pexels.com/photos/255501/pexels-photo-255501.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" height=300px width=200px>
       </div>
-      <img class="circle userpicside" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+      <img class="circle userpicside" src="https://cdn4.iconfinder.com/data/icons/green-shopper/1068/user.png">
 			<div class = "userinfoside">
       <span class="white-text name">{{this.dataValues.firstname}}</span></a>
       <span class="white-text username">{{this.dataValues.username}}</span></a>
@@ -35,6 +35,7 @@
 	      <li><a href="/profile">Recalculate Macros</a></li>
 				<li><a href="/mealsearch">Search Recipes</a></li>
 	      <li><a href="/mealbox">View Saved Recipes</a></li>
+				<li><a href="/ingredientsearch">Search by Ingredients</a></li>
 		</div>
 			<li>
 				<div class = "macrosmini">
@@ -45,25 +46,18 @@
 		      <span class="white-text proteinside">Protein: {{this.dataValues.protein}}</span>
 				</div>
 			</li>
+			<li> <input class="btn" id="logoutbutton" type="button" value="Log Out"/> </li>
 	    </ul>
-	    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+	    <!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
 
 
 		{{{ body }}}
 
 		<footer class="page-footer footerloggedin">
-          <div class="container">
-            <div class="row footerrow">
-              <div class="col l12 s12">
-                <h5 class="white-text center">Footer Content</h5>
-                <p class="grey-text text-lighten-4 center"></p>
-								 <center> <input class="btn" id="logoutbutton" type="button" value="Log Out"/> <center>
-              </div>
-            </div>
-          </div>
+
           <div class="footer-copyright">
             <div class="container">
-            © 2017 MacroMeals
+            <img src= "https://i.imgur.com/tOiLqPu.png">
             </div>
           </div>
         </footer>
