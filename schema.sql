@@ -30,10 +30,14 @@ lbs INT NOT NULL,
 mifflinStJeor BOOLEAN,
 exerciseLevel INT NOT NULL,
 goal DECIMAL(2,1),
-protein DECIMAL(5,2)
-fat DECIMAL(5,2)
-carbs DECIMAL(5,2)
-calories DECIMAL(5,2)
+protein DECIMAL(5,2),
+fat DECIMAL(5,2),
+carbs DECIMAL(5,2),
+calories DECIMAL(5,2),
+caloriesmeal DECIMAL(5,2),
+carbsmeal DECIMAL (5,2),
+proteinmeal DECIMAL (5,2),
+fatmeal DECIMAL (5,2)
 createdAt timestamp DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY(id)
 
@@ -49,5 +53,3 @@ createdAt timestamp DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY(id)
 
 )
-
-

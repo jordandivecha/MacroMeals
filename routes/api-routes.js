@@ -44,9 +44,13 @@ var goal = parseFloat(req.body.goal);
               exerciseLevel: exerciseLevel,
               mifflinStJeor: mifflinStJeor,
               calories: calculator.tdee,
+              caloriesmeal: ((calculator.tdee)/5),
               protein: calculator.protein,
+              proteinmeal: (calculator.protein)/5,
               fat: calculator.fat,
-              carbs: calculator.carbs
+              fatmeal: (calculator.fat)/5,
+              carbs: calculator.carbs,
+              carbsmeal: (calculator.carbs)/5
             };
 
       console.log(JSON.stringify(profile, null, 2));
@@ -68,7 +72,11 @@ var goal = parseFloat(req.body.goal);
           calories: profile.calories,
           protein: profile.protein,
           fat: profile.fat,
-          carbs: profile.carbs
+          carbs: profile.carbs,
+          caloriesmeal: profile.caloriesmeal,
+          fatmeal: profile.fatmeal,
+          carbsmeal: profile.carbsmeal,
+          proteinmeal: profile.proteinmeal
         },
 
         {where: {id: id}}

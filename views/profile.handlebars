@@ -6,15 +6,15 @@
       <form class="col s8 userintakeholder z-depth-2 center">
         <div class="row">
           <div class="input-field col s4">
-            <input id="firstname" type="text" class="validate">
+            <input id="firstname" type="text" class="validate" value= {{this.dataValues.firstname}}>
             <label for="firstname">First Name</label>
           </div>
           <div class="input-field col s4">
-            <input id="lastname" type="text" class="validate">
+            <input id="lastname" type="text" class="validate" value = {{this.dataValues.lastname}}>
             <label for="lastname">Last Name</label>
           </div>
           <div class="input-field col s4">
-            <input id="username" type="text" class="validate">
+            <input id="username" type="text" class="validate" value={{this.dataValues.username}}>
             <label for="username">Username</label>
           </div>
         </div>
@@ -29,14 +29,14 @@
           </div>
           <div class="input-field col s2">
 
-            <input id="age" type="number" class="validate" min="1" max="100">
+            <input id="age" type="number" class="validate" min="1" max="100" value={{this.dataValues.age}}>
             <label for="age"  data-error="Invalid input.">Age</label>
           </div>
 
           <div class="col s2">
 
             <div class="input-field inline">
-              <input id="ft" type="number" class="validate" min="2" max="8">
+              <input id="ft" type="number" class="validate" min="2" max="8" value={{this.dataValues.ft}}>
               <label for="ft" data-error="Invalid input.">Feet</label>
               <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
             </div>
@@ -44,20 +44,20 @@
           <div class="col s2">
 
             <div class="input-field inline">
-              <input id="inches" type="number" class="validate" min="0" max="11">
+              <input id="inches" type="number" class="validate" min="0" max="11" value={{this.dataValues.inches}}>
               <label for="inches" data-error="Invalid input.">Inches</label>
               <!-- <span class="helper-text" data-error="wrong" data-success="right">Height</span> -->
             </div>
           </div>
           <div class="input-field col s3">
 
-            <input id="lbs" type="number" class="validate" min="4" max="1400">
+            <input id="lbs" type="number" class="validate" min="4" max="1400" value={{this.dataValues.lbs}}>
             <label for="lbs" data-error="Invalid input.">Weight</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s3" >
-            <select id= "goal">
+            <select id= "goal" value={{this.dataValues.goal}}>
             <option value="" disabled selected></option>
             <option value="0.8">Cut</option>
             <option value="1">Maintain</option>
@@ -67,7 +67,7 @@
           </div>
 
           <div class=" col s6 activityslider">
-            <form action="#" id="exerciseLevel">
+            <form action="#" id="exerciseLevel" value={{this.dataValues.exerciseLevel}}>
               <p class="rangedescrip center">On a scale 1-9, rate your daily activity level.</p>
               <p class="range-field">
                 <input type="range"  min="1" max="9" id="exerciseLevel" />
@@ -76,7 +76,7 @@
           </div>
 
           <div class="input-field col s3" >
-            <select type= "Boolean" id="mifflinStJeor">
+            <select type= "Boolean" id="mifflinStJeor" value={{this.dataValues.mifflinStJeor}}>
               <option value="" disabled selected></option>
               <option value=true>No</option>
               <option value=false>Yes</option>

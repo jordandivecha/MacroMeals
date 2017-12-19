@@ -49,7 +49,7 @@ var User = sequelize.define('user', {
   },
 
   lbs: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL,
 
   },
 
@@ -64,30 +64,45 @@ var User = sequelize.define('user', {
   },
 
   goal: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL,
 
   },
 
   protein: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL,
 
   },
 
   fat: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL,
 
   },
 
   carbs: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL,
   },
 
   calories: {
-    type: DataTypes.INTEGER,
-  }
+    type: DataTypes.DECIMAL,
+  },
+
+  caloriesmeal: {
+    type: DataTypes.DECIMAL,
+  },
+
+  carbsmeal:{
+    type: DataTypes.DECIMAL,
+  },
+
+  proteinmeal:{
+    type: DataTypes.DECIMAL,
+  },
+
+  fatmeal:{
+    type: DataTypes.DECIMAL,
+  },
 
 });
-
 
 User.associate = function(models) {
 
@@ -97,13 +112,13 @@ User.associate = function(models) {
 
 };
 
-User.associate = function(models) {
-
-  User.hasMany(models.Ingredient, {
-    onDelete: "cascade"
-  });
-
-};
+// User.associate = function(models) {
+//
+//   User.hasMany(models.Ingredient, {
+//     onDelete: "cascade"
+//   });
+//
+// };
 
   return User;
 };
