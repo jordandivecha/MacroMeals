@@ -92,6 +92,6 @@ app.get("/ingredientsearch", function (req,res){
 
 
 app.get("*", function(req,res){
-  res.sendFile(path.join(__dirname, "/404page/errpage.html"));
+  res.sendFile(path.join(__dirname, "/public/404page/errpage.html"));
 });
 };

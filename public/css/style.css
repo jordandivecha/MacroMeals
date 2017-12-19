@@ -6860,6 +6860,12 @@ footer {
   padding: unset;
   padding: 10px; }
 
+.footer-copyright {
+  height: 100px; }
+
+.footerrow {
+  max-height: 100px; }
+
 .macrosmini {
   background-color: #C62828;
   text-align: center; }
