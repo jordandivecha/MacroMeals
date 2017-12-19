@@ -4348,8 +4348,8 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]),
   input[type=search]:not(.browser-default):focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #FFFFFF;
-    box-shadow: 0 1px 0 0 #FFFFFF; }
+    border-bottom: 1px solid #0277bd;
+    box-shadow: 0 1px 0 0 #0277bd; }
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:not(.browser-default):focus:not([readonly]) + label,
   input[type=password]:not(.browser-default):focus:not([readonly]) + label,
@@ -4363,7 +4363,7 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]) + label,
   input[type=search]:not(.browser-default):focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #FFFFFF; }
+    color: #0277bd; }
   input:not([type]).validate + label,
   input[type=text]:not(.browser-default).validate + label,
   input[type=password]:not(.browser-default).validate + label,
@@ -4606,7 +4606,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     font-size: 2rem;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #FFFFFF; }
+      color: #0277bd; }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea,
   .input-field .prefix ~ label,
@@ -6891,7 +6891,9 @@ form {
   background-color: #fafafa; }
 
 .footerloggedout {
-  padding-left: 0px; }
+  padding-left: 0px;
+  background-color: unset;
+  background-color: transparent; }
 
 .mainloggedout {
   padding-left: 0px; }
@@ -6908,12 +6910,19 @@ form {
   background-size: cover; }
 
 .signinbutton {
-  margin: 15px; }
+  margin: 15px !important; }
 
 .signupbutton {
-  margin: 15px; }
+  margin: 15px !important; }
 
 .text {
   color: #FFFFF !important; }
+
+.logoutbutton {
+  margin: 0 auto;
+  text-align: center; }
+
+.footerloggedin {
+  padding-left: 200px; }
 
 /*# sourceMappingURL=style.css.map */
