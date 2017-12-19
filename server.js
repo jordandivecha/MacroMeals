@@ -49,7 +49,7 @@ require('./routes/auth.js')(app,passport);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-models.sequelize.sync().then(function() {
+models.sequelize.sync({force: true}).then(function() {
 
     console.log('Nice! Database looks great. Listening on PORT'+ PORT);
 
