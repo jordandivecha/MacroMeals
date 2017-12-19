@@ -1,9 +1,11 @@
 <main>
 <div class = "row">
-  <div class = "col s1"></div>
-  <div class = "col s10 mealbox">
-    {{#each this.Meals}}
-    <div class="col s12 m6">
+  <h1 class="usertitle"> Saved Recipes </h1>
+    <h4><center>Those look like some tasty recipes that you've saved!<center></h4>
+      <div class = "col s1"></div>
+      <div class = "col s10 mealbox">
+        {{#each this.Meals}}
+      <div class="col s12 m6">
       <div class="card">
         <div class="card-image">
           <img src="{{this.image}}">
