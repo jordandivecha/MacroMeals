@@ -69,6 +69,8 @@ h1{
 
 footer{
   height: 200px;
+  padding: unset;
+  padding: 10px;
 }
 .macrosmini{
   background-color: $primary-color;
@@ -119,4 +121,18 @@ form {
   max-height: 700px;
   text-align: center;
 
+}
+.loggedoutbackground{
+  background-image: url("../img/macromealsfaded.jpg");
+  background-size: cover;
+}
+.signinbutton{
+  margin: 15px;
+}
+.signupbutton{
+  margin: 15px;
+}
+
+.text{
+  color: #FFFFF !important;
 }

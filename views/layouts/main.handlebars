@@ -26,23 +26,23 @@
       </div>
       <img class="circle userpicside" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
 			<div class = "userinfoside">
-      <span class="white-text name">{{this.firstname}}</span></a>
-      <span class="white-text username">{{this.username}}</span></a>
+      <span class="white-text name">{{this.dataValues.firstname}}</span></a>
+      <span class="white-text username">{{this.dataValues.username}}</span></a>
 		</div>
     </div> </li>
 		<div class ="sidelinks">
-	      <li><a href="#!">Update Profile</a></li>
-	      <li><a href="#!">Recalculate Macros</a></li>
-				<li><a href="#!">Search Recipes</a></li>
-	      <li><a href="#!">View Saved Recipes</a></li>
+	      <li><a href="/profile">Update Profile</a></li>
+	      <li><a href="/profile">Recalculate Macros</a></li>
+				<li><a href="/mealsearch">Search Recipes</a></li>
+	      <li><a href="/mealbox">View Saved Recipes</a></li>
 		</div>
 			<li>
 				<div class = "macrosmini">
 					<span class = "black-text macrotitleside">Daily Macros</span><br>
-					<span class="white-text caloriesside">Calories: {{this.calories}}</span><br>
-		     <span class="white-text carbsside">Carbs: {{this.carbs}} </span><br>
-					<span class="white-text fatside">Fat: {{this.fat}}</span><br>
-		      <span class="white-text proteinside">Protein: {{this.protein}}</span>
+					<span class="white-text caloriesside">Calories: {{this.dataValues.calories}}</span><br>
+		     <span class="white-text carbsside">Carbs: {{this.dataValues.carbs}} </span><br>
+					<span class="white-text fatside">Fat: {{this.dataValues.fat}}</span><br>
+		      <span class="white-text proteinside">Protein: {{this.dataValues.protein}}</span>
 				</div>
 			</li>
 	    </ul>
@@ -57,6 +57,7 @@
               <div class="col l12 s12">
                 <h5 class="white-text center">Footer Content</h5>
                 <p class="grey-text text-lighten-4 center">You can use rows and columns here to organize your footer content.</p>
+								  <input class="btn" id="logoutbutton" type="button" value="Log Out"/>
               </div>
             </div>
           </div>
