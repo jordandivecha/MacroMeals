@@ -227,18 +227,19 @@ $("#sendprofile").on("click", function(event) {
 
         var baseurl = "https://spoonacular.com/recipe/";
         var ingredientstitle = result[i].title;
+        console.log(ingredientstitle);
         var ingredientsid = result[i].id;
         var ingredientsimage= result[i].image;
         ingredientstitledashes = ingredientstitle.replace(/\s+/g, '-').toLowerCase();
         var url = baseurl + ingredientstitledashes + "-" + ingredientsid;
         console.log(url);
 
-        var ingredientsCard = $("<div class = 'card ingredientscard' id = 'ingredientscard"+recipeid+"' >");
+        var ingredientsCard = $("<div class = 'card ingredientscard' id = 'ingredientscard"+ingredientsid+"' >");
         var ingredientsCardImage = $("<div class = 'card-image' id= 'ingredientsimage'><img src='"+ ingredientsimage +"'>");
         var ingredientsCardTitle = $("<span class = 'card-title'>"+ingredientstitle+"</span>");
         var ingredientsCardContent = $('<div class="card-content">');
         var ingredientsCardLink = $('<a id = "recipelink">Recipe Link</a>');
-        var recipeCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red saveingredients' </a>");
+        // var ingredientsCardSave = $("<a class='btn-floating halfway-fab waves-effect waves-light red saveingredients' </a>");
 
           ingredientsCard.append(ingredientsCardImage);
           ingredientsCard.append(ingredientsCardTitle);
@@ -248,9 +249,9 @@ $("#sendprofile").on("click", function(event) {
           ingredientsCardContent.append(ingredientsCardLink);
 
           ingredientsCard.append(ingredientsCardContent);
-          ingredientsCardSave.append('<i class="material-icons">save</i>').attr("image", ingredientsimage).attr("title", ingredientstitle).attr("ingredientsid", ingredientsid).attr("link", url);
+          // ingredientsCardSave.append('<i class="material-icons">save</i>').attr("image", ingredientsimage).attr("title", ingredientstitle).attr("ingredientsid", ingredientsid).attr("link", url);
 
-          ingredientsCard.append(ingredientsCardSave);
+          // ingredientsCard.append(ingredientsCardSave);
 
           $('#ingredientsresults').append(ingredientsCard);
 

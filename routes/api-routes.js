@@ -148,16 +148,18 @@ app.post("/api/ingredientsearch", function(req, res) {
 
   console.log(req.body);
 
-  var ingredientOne = req.body.ingredientOne;
-  var ingredientTwo = req.body.ingredientTwo;
-  var ingredientThree = req.body.ingredientThree;
-  var ingredientFour = req.body.ingredientFour;
-  var ingredientFive = req.body.ingredientFive;
+  var ingredientOne = req.body.firstingredient;
+  var ingredientTwo = req.body.secondingredient;
+  var ingredientThree = req.body.thirdingredient;
+  var ingredientFour = req.body.fourthingredient;
+  var ingredientFive = req.body.fifthingredient;
+
+  // console.log("ING ONE0" + ingredientOne)
 
 
 
 
-    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=false&number=25&ranking=2")
+    unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=" + ingredientOne + "%2C" + ingredientTwo + "%2C" + ingredientThree + "%2C" + ingredientFour + "%2C" + ingredientFive + "&limitLicense=true&number=25&ranking=2")
     .header("X-Mashape-Key", "qR7uXCgKeRmshIMwcyGqmSveS8Glp1FzEuWjsn5bhflGzBebrJ")
     .header("X-Mashape-Host", "spoonacular-recipe-food-nutrition-v1.p.mashape.com")
     .end(function (result) {
