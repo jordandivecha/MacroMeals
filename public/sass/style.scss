@@ -109,6 +109,8 @@ form {
 
 .footerloggedout{
   padding-left: 0px;
+  background-color: unset;
+  background-color: transparent;
 }
 .mainloggedout{
   padding-left: 0px;
@@ -127,12 +129,21 @@ form {
   background-size: cover;
 }
 .signinbutton{
-  margin: 15px;
+  margin: 15px !important;
 }
 .signupbutton{
-  margin: 15px;
+  margin: 15px !important;
 }
 
 .text{
   color: #FFFFF !important;
+}
+
+.logoutbutton {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footerloggedin{
+  padding-left: 200px;
 }
