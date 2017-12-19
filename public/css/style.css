@@ -6905,7 +6905,6 @@ form {
   padding-left: 0px; }
 
 .recipecard {
-  max-width: 400px !important;
   float: right;
   margin: 25px;
   max-height: 700px;
@@ -6930,5 +6929,8 @@ form {
 
 .footerloggedin {
   padding-left: 200px; }
+
+.ingredientsCard .recipeCard {
+  width: 20%; }
 
 /*# sourceMappingURL=style.css.map */

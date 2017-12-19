@@ -28,7 +28,7 @@ var age = parseFloat(req.body.age);
 var exerciseLevel = parseFloat(req.body.exerciseLevel);
 var goal = parseFloat(req.body.goal);
 
-  calculator(req.body.gender, age, ft, inches, lbs, mifflinStJeor, exerciseLevel,  goal,
+  calculator(req.body.gender, age, ft, inches, lbs,  exerciseLevel,  goal,
 
     function (calculator){
       var profile ={
@@ -53,7 +53,7 @@ var goal = parseFloat(req.body.goal);
               carbsmeal: (calculator.carbs)/5
             };
 
-      console.log(JSON.stringify(profile, null, 2));
+      // console.log(JSON.stringify(profile, null, 2));
 
 
       db.user.update(
@@ -82,11 +82,8 @@ var goal = parseFloat(req.body.goal);
         {where: {id: id}}
 
       ).then(function(result) {
-        if (err){
-          console.log (err);
-        }
-         res.json(profile);
          res.end();
+
       });
 
 

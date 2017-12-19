@@ -20,7 +20,7 @@
         </div>
         <div class="row">
           <div class="input-field col s3" >
-            <select id="gender">
+            <select id="gender" value={{this.dataValues.gender}}>
             <option value="" disabled selected></option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -67,10 +67,10 @@
           </div>
 
           <div class=" col s6 activityslider">
-            <form action="#" id="exerciseLevel" value={{this.dataValues.exerciseLevel}}>
+            <form action="#" id="exerciseLevel" >
               <p class="rangedescrip center">On a scale 1-9, rate your daily activity level.</p>
               <p class="range-field">
-                <input type="range"  min="1" max="9" id="exerciseLevel" />
+                <input type="range"  min="1" max="9" id="exerciseLevel" value={{this.dataValues.exerciseLevel}} />
               </p>
             </form>
           </div>
