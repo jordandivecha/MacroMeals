@@ -7,28 +7,36 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
 	<!--google font link -->
-	<link href="https://fonts.googleapis.com/css?family=Geostar+Fill|Stint+Ultra+Expanded" rel="stylesheet">         
+	<link href="https://fonts.googleapis.com/css?family=Geostar+Fill|Stint+Ultra+Expanded" rel="stylesheet">
 </head>
 
 	<div class="parallax-container" style="height:200px">
-		<div class="parallax"><img src="space.jpg"></div>
+		<div class="parallax"><img src="/404page/space.jpg"></div>
 	</div>
 	<div class="section black" style="text-align: center">
 		<div class="row container">
 			<h2 class="header" style="text-align: center; color: white; font-size: 48pt; font-family: 'Geostar Fill';">Error 404: </br> Not Found </h2>
 
 			<p style="text-align: center; color: white; font-size: 24pt; font-family: 'Stint Ultra Expanded'">If Rocky couldn't sniff it out, </br> the page doesn't exist. </p>
-			<img src="rockyyy.jpg" alt="A Very Good Boy" style="text-align: center; max-width: 900px; min-width: 200px">
+			<img src="/404page/rockyyy.jpg" alt="A Very Good Boy" style="text-align: center; max-width: 900px; min-width: 200px">
 			<a class="waves-effect waves-light btn-large lime accent-4 hoverable" style="text-align: center" id="redirectBtn">Ahh Take me home, Rocky!</a>
 		</div>
 	</div>
 	<div class="parallax-container">
-    	<div class="parallax"><img src="space2.jpg"></div>
+    	<div class="parallax"><img src="/404page/space2.jpg"></div>
  	</div>
 
 
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
- 	<script type="text/javascript" src="main.js"></script>
+ 	<script>
+	$(document).ready(function(){
+	    $('.parallax').parallax();
+	});
+
+	$('#redirectBtn').on("click", function(){
+		window.location.href = "/signup"
+	});
+	</script>
 </html>
