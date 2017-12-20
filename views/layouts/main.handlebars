@@ -17,25 +17,26 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 	</head>
-	<body>
+	<body class = "mainbody">
 	<!-- Side Nav -->
 		<ul id="slide-out" class="side-nav fixed responsive">
 			<li><div class="user-view center">
       <div class="background" >
         <img src="https://images.pexels.com/photos/255501/pexels-photo-255501.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" height=300px width=200px>
       </div>
-      <img class="circle userpicside z-depth-2" src="https://cdn4.iconfinder.com/data/icons/green-shopper/1068/user.png">
+      <img class="circle userpicside z-depth-4" src="https://cdn4.iconfinder.com/data/icons/green-shopper/1068/user.png">
 			<div class = "userinfoside">
-      <span class="white-text name">{{this.dataValues.firstname}}</span></a>
-      <span class="white-text username">{{this.dataValues.username}}</span></a>
+      <span class="white-text name" id="sidename">{{this.dataValues.firstname}}</span></a>
+      <span class="white-text username" id="sideusername">{{this.dataValues.username}}</span></a>
 		</div>
     </div> </li>
 		<div class ="sidelinks">
 	      <li><a href="/profile">Update Profile</a></li>
 	      <li><a href="/profile">Recalculate Macros</a></li>
 				<li><a href="/mealsearch">Search Recipes</a></li>
-	      <li><a href="/mealbox">View Saved Recipes</a></li>
 				<li><a href="/ingredientsearch">Search by Ingredients</a></li>
+	      <li><a href="/mealbox">View Saved Recipes</a></li>
+
 		</div>
 			<li>
 				<div class = "macrosmini">
@@ -48,7 +49,7 @@
 			</li>
 			<li> <input class="btn" id="logoutbutton" type="button" value="Log Out"/> </li>
 	    </ul>
-	    <!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
+	    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
 
 		{{{ body }}}

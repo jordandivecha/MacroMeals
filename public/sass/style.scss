@@ -50,23 +50,21 @@ a.buttoncollapse{
 }
 
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 600px) {
   header, main, footer {
     padding-left: 0;
   }
-
-  .buttoncollapse{
-    visibility: visible;
-    background-color: black;
-  }
-
 }
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
+.mainbody{
+  background-image: url("../img/noms.png");
+  background-repeat:repeat;
+  background-size: contain;
+}
 main {
   flex: 1 0 auto;
 }
@@ -116,8 +114,11 @@ footer{
   text-align: center;
 
 }
+
 .macrotitleside{
     font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
 }
 .usertitle{
   text-align: center;
@@ -144,6 +145,7 @@ form {
 }
 .userintakeholder{
   background-color: #fafafa;
+  padding-top: 15px !important;
 }
 
 .footerloggedout{
@@ -154,23 +156,34 @@ form {
 .mainloggedout{
   padding-left: 0px;
 }
-
+#reciperesults{
+  text-align: center;
+}
 .recipecard {
 
   float:left;
   float: clear;
   margin: 25px;
   text-align: center;
-  max-width: 300px;
+  max-width: 300px !important;
+
 
 }
+.titleingredients{
+  text-shadow: 1px 2px white;
+
+}
+
 
 .ingredientscard{
   float:left;
 float: clear;
 margin: 25px;
 text-align: center;
-max-width: 300px;
+max-width: 300px !important;
+height: 400px !important;
+vertical-align: middle;
+
 }
 
 .loggedoutbackground{
@@ -208,14 +221,15 @@ margin-top: 20px;
   padding-left: 200px;
 }
 
-.ingredientsCard .recipeCard {
-  max-width: 200px;
+.mealboxcards{
+  max-width: 300px;
 }
+.userpicside{
+  text-shadow: 2px 2px black;
 
+}
 .main{
-  background-image: url("../img/noms.png");
-  background-repeat:repeat;
-  background-size: contain;
+
   margin-top: 0px;
 }
 #sendprofile{
@@ -223,4 +237,10 @@ margin-top: 20px;
 }
 #ingredientsearch{
   margin-top: 15px;
+}
+#sidename{
+  font-size: 18px;
+}
+#sideusername{
+  font-size:14px;
 }

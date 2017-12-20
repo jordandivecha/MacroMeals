@@ -85,8 +85,16 @@ app.get("/api/mealbox", function (req,res){
 });
 
 app.get("/ingredientsearch", function (req,res){
-  res.render("ingredientsearch");
+  var id = req.session.passport.user;
+  console.log(id);
+  db.user.findOne(
+    {where:
+      {id: id}}
+    ).then(function(result){
+  res.render("ingredientsearch", result);
 });
+});
+
 
 
 

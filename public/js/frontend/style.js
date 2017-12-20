@@ -1,5 +1,6 @@
 $(document).ready(function() {
 // $('select').material_select();
+$(".button-collapse").sideNav();
 var gender = $("#gender").attr("value");
 $("#gender").val(gender);
 $('#gender').material_select();
