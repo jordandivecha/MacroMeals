@@ -148,7 +148,7 @@ $("#sendprofile").on("click", function(event) {
       console.log(url);
 
       var recipeCard = $("<div class = 'card recipecard hoverable' id = 'recipecard"+recipeid+"' >");
-      var recipeCardImage = $("<div class = 'card-image' id= 'recipeimage'><img src='"+ recipeimage +"'>");
+      var recipeCardImage = $("<div class = 'card-image recipeimage'><img src='"+ recipeimage +"'>");
       var recipeCardTitle = $("<span class = 'card-title'>"+recipetitle+"</span>");
       var recipeCardContent = $('<div class="card-content">');
       var recipeCardMacros = $("<p class = 'recipecalories' >Calories(g): "+ result[i].calories +"</p><br><p class = 'recipeprotein'>Protein(g): "+ result[i].protein + "</p> <br> <p class='recipecarbs'>Carbs(g): "+ result[i].carbs +" </p><br> <p class='recipefat'>Fat(g): " + result[i].fat + "</p><br>");

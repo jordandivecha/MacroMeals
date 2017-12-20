@@ -6,12 +6,13 @@
       <div class = "col s10 mealbox">
         {{#each this.Meals}}
       <div class="col s12 m6">
-      <div class="card">
+      <div class="card mealboxcards">
         <div class="card-image">
           <img src="{{this.image}}">
-          <span class="card-title black-text">{{this.title}}</span>
+
         </div>
-        <div class="card-content">
+        <div class="card-content mealcontent">
+          <span class="card-title black-text titleingredients">{{this.title}}</span>
           <p>Calories: {{this.calories}}</p><br>
           <p>Protein: {{this.protein}}</p><br>
           <p>Carbs: {{this.carbs}}</p><br>

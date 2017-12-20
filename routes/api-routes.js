@@ -187,17 +187,17 @@ app.delete("/mealbox/:id", function (req, res){
 
 });
 
-app.post("/ingredientsbox", function (req,res){
-  var id = req.session.passport.user;
-
-  db.Ingredient.create({
-    userId: id,
-    image: req.body.image,
-    link: req.body.link,
-    title: req.body.title,
-
-  }).then(function(result){
-    console.log("yay");
-  });
-});
+// app.post("/ingredientsbox", function (req,res){
+//   var id = req.session.passport.user;
+//
+//   db.Ingredient.create({
+//     userId: id,
+//     image: req.body.image,
+//     link: req.body.link,
+//     title: req.body.title,
+//
+//   }).then(function(result){
+//     console.log("yay");
+//   });
+// });
 };
