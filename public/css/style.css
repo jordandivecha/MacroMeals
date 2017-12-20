@@ -6937,6 +6937,13 @@ form {
   text-align: center;
   max-width: 300px; }
 
+.ingredientscard {
+  float: left;
+  float: clear;
+  margin: 25px;
+  text-align: center;
+  max-width: 300px; }
+
 .loggedoutbackground {
   background-image: url("../img/macromealsfaded.jpg");
   background-size: cover; }
@@ -6979,6 +6986,9 @@ form {
   margin-top: 0px; }
 
 #sendprofile {
+  margin-top: 15px; }
+
+#ingredientsearch {
   margin-top: 15px; }
 
 /*# sourceMappingURL=style.css.map */
