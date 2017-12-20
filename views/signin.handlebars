@@ -1,17 +1,24 @@
 <main class = "mainloggedout">
-  
-  <div class="row">
-  <div class = "col s1"></div>
-  <div class = "col s6">
+
+  <div class="row"></div>
+
+  <div class = "row">
+
+  <div class = "col m1"></div>
+  <div class = "col m7 s12">
+    <div class = "row">
     <form id="signin" name="signin" method="post" action="/signin">
         <label for="username">Username</label>
-        <input class="text" name="username" type="text" >
+        <input class="text white-text" name="username" type="text" >
         <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" id="signinbutton" type="submit" value="Sign In"/>
-        <input class="btn" id="signupbutton" type="button" value="Sign Up"/>
+        <input name="password" type="password" class = "white-text"/>
+        <input class="btn left" id="signinbutton" type="submit" value="Sign In"/>
+        <input class="btn right" id="signupbutton" type="button" value="Sign Up"/>
     </form>
   </div>
-  <div class = "col s3"></div>
+  <div class = "row">
+    <p class = "right white-text" style= "margin-top:0px">New to MacroMeals? </p>
+  </div>
+  <div class = "col m5"></div>
 </div>
 </main>
