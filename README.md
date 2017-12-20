@@ -12,6 +12,7 @@
 * Enter your stats to get a total caloric and macros intake profile for specific goals (lose, maintain, gain)
 * Search meal recipes based on a by-meal (5) breakdown for your total caloric intake
 * Get meal recipes based on what is in your grocery cart/refrigerator
+* Save meal recipes to personal recipe box
 
 ------------------------------------------------------------------------------------------------------------
 
