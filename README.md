@@ -3,15 +3,15 @@
 ![Collab](https://i.imgur.com/ofItTSp.png)
 
 
-## MacroMeals is a full stack application built to lead a healthier lifestyle from a nutritional standpoint.
+## MacroMeals is a full-stack application built to assist health-conscious consumers in designing personalized nutritionally-sound meal plans.
 
 
 
 ## Features:
 
-* Enter your stats and get your total caloric intake to gain, maintain or lose weight
-* Get meal recipes based on 5 meals a day for your total calorie intake
-* Get meal recipes based on what's in your grocery cart
+* Enter your stats to get a total caloric and macros intake profile for specific goals (lose, maintain, gain)
+* Search meal recipes based on a by-meal (5) breakdown for your total caloric intake
+* Get meal recipes based on what is in your grocery cart/refrigerator
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -19,19 +19,16 @@ Tech used:
 
 * HTML
 * CSS, Materialize
+* Handlebars
+* Sass
 * Javascript
-* NodeJS
-* NPM packages(Express, Passport, Unirest,Sequelize, IIFYM, bcrypt-nodejs)
-* SQL workbench
-* Jquery
+* Node
+* Ruby
+* NPM Packages (Express, Passport, Unirest, Sequelize, IIFYM, bcrypt-nodejs)
+* SQL Workbench/SequelPro/JawsDB
+* JQuery
 * Spoonacular API
-
+* Photoshop
 ------------------------------------------------------------------------------------------------------------
 
 ![Footer](https://i.imgur.com/p1663GW.png)
-
-
-
-
-
-
