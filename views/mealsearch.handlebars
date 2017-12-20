@@ -1,27 +1,29 @@
 <main class="main">
   <div class="row">
-    <h1 class="usertitle"> Meal Search </h1>
+    <h2 class="usertitle"> Meal Search </h2>
     <h4><center>Find and save meals based on your macros!<center></h4>
     <div class = "col s2"></div>
-    <div class="input-field col s2">
+    <div class = "col s8 hoverable searchbar white z-depth-2 center">
+    <div class="input-field col s3">
       <input id="calories" type="number" class="validate" value={{this.dataValues.caloriesmeal}}>
       <label for="calories">Calories</label>
     </div>
 
-    <div class="input-field col s2">
+    <div class="input-field col s3">
       <input id="protein" type="number" class="validate" value={{this.dataValues.proteinmeal}}>
       <label for="protein">Protein (g)</label>
     </div>
 
-    <div class="input-field col s2">
+    <div class="input-field col s3">
       <input id="carbs" type="number" class="validate" value={{this.dataValues.carbsmeal}} >
       <label for="carbs">Carbs (g)</label>
     </div>
 
-    <div class="input-field col s2">
+    <div class="input-field col s3">
       <input id="fat" type="number" class="validate" value= {{this.dataValues.fatmeal}}>
       <label for="fat">Fat (g)</label>
     </div>
+  </div>
 
     <div class="row">
       <div class="col s8"></div>

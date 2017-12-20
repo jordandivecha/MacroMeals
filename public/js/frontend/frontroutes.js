@@ -147,7 +147,7 @@ $("#sendprofile").on("click", function(event) {
       var url = baseurl + recipetitledashes + "-" + recipeid;
       console.log(url);
 
-      var recipeCard = $("<div class = 'card recipecard' id = 'recipecard"+recipeid+"' >");
+      var recipeCard = $("<div class = 'card recipecard hoverable' id = 'recipecard"+recipeid+"' >");
       var recipeCardImage = $("<div class = 'card-image' id= 'recipeimage'><img src='"+ recipeimage +"'>");
       var recipeCardTitle = $("<span class = 'card-title'>"+recipetitle+"</span>");
       var recipeCardContent = $('<div class="card-content">');
@@ -234,7 +234,7 @@ $("#sendprofile").on("click", function(event) {
         var url = baseurl + ingredientstitledashes + "-" + ingredientsid;
         console.log(url);
 
-        var ingredientsCard = $("<div class = 'card ingredientscard' id = 'ingredientscard"+ingredientsid+"' >");
+        var ingredientsCard = $("<div class = 'card ingredientscard hoverable' id = 'ingredientscard"+ingredientsid+"' >");
         var ingredientsCardImage = $("<div class = 'card-image' id= 'ingredientsimage'><img src='"+ ingredientsimage +"'>");
         var ingredientsCardTitle = $("<span class = 'card-title'>"+ingredientstitle+"</span>");
         var ingredientsCardContent = $('<div class="card-content">');
