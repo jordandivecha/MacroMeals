@@ -1,11 +1,11 @@
-![MacroMeals!](https://i.imgur.com/EQeJIk1.png)
+![MacroMeals!](https://i.imgur.com/UcmvHJr.png)
 
-![Collab](https://i.imgur.com/MZpz0BD.png)
+![Collab](https://i.imgur.com/ofItTSp.png)
 
 
 ## MacroMeals is a full stack application built to lead a healthier lifestyle from a nutritional standpoint.
 
-------------------------------------------------------------------------------------------------------------
+
 
 ## Features:
 
@@ -28,7 +28,7 @@ Tech used:
 
 ------------------------------------------------------------------------------------------------------------
 
-![Footer](https://i.imgur.com/Mq3SouE.png)
+![Footer](https://i.imgur.com/p1663GW.png)
 
 
 
